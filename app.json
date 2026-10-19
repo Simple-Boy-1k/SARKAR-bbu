@@ -1,0 +1,42 @@
+{
+  "name": "deep-emotions-telegram-bot",
+  "description": "Deep Emotions Telegram bot with Gemini AI",
+  "repository": "",
+  "keywords": [
+    "telegram",
+    "bot",
+    "gemini",
+    "python"
+  ],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Telegram bot token from @BotFather",
+      "required": true
+    },
+    "GEMINI_API_KEY": {
+      "description": "Gemini API key from Google AI Studio. Keep it secret.",
+      "required": true
+    },
+    "GEMINI_MODEL": {
+      "description": "Gemini model ID",
+      "value": "gemini-2.5-flash",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Numeric Telegram user ID for the bot owner",
+      "value": "0",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
